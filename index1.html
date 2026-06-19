@@ -4,17 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .contributors {
+            background: #f0f4ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .contributors h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .contributor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .contributor-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contributor-item:hover {
+            transform: scale(1.05);
+        }
+
+        .contributor-item strong {
+            color: #667eea;
+            display: block;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 25px 15px;
+            }
+
+            .content-wrapper {
+                gap: 20px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header {
+                padding: 40px 15px;
+            }
+
+            .card h2 {
+                font-size: 1.2rem;
+            }
+
+            .contributors h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
 </head>
 <body>
-     <h1>Heading added by harsh's branch</h1> 
-    <h1> Arnav Jain Branch</h1>
-    <h1>Welcome to My Website</h1>
-    <h2>Branch by Kinjal Jain</h2>
-    <p>This is a simple webpage.</p>
-    <p> this is line added by bhavya mittal</p>
-    <p> hi this is bhavya's repo in the new branch</p>
-    <p> Added by Arnav Jain</p>
-    <p> Paragraph added by harsh</p>
-    <p>Edited by Kinjal Jain</p>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Website</h1>
+            <p>A beautiful and responsive web experience</p>
+        </header>
+
+        <main>
+            <section class="content-wrapper">
+                <div class="card">
+                    <h2>Simple & Clean</h2>
+                    <p>This is a beautifully designed responsive webpage that adapts perfectly to any device. Built with modern web standards and best practices.</p>
+                </div>
+
+                <div class="card">
+                    <h2>Responsive Design</h2>
+                    <p>Works seamlessly on desktop, tablet, and mobile devices. The layout automatically adjusts to provide the best viewing experience on every screen size.</p>
+                </div>
+
+                <div class="card">
+                    <h2>Modern Aesthetic</h2>
+                    <p>Features a contemporary design with smooth transitions, beautiful gradients, and an intuitive user interface that's both functional and visually appealing.</p>
+                </div>
+            </section>
+
+            <section class="contributors">
+                <h2>Contributors</h2>
+                <div class="contributor-list">
+                    <div class="contributor-item">
+                        <p>Harsh</p>
+                        <strong>✓ Added Heading</strong>
+                    </div>
+                    <div class="contributor-item">
+                        <p>Arnav Jain</p>
+                        <strong>✓ Branch Contributor</strong>
+                    </div>
+                    <div class="contributor-item">
+                        <p>Kinjal Jain</p>
+                        <strong>✓ Branch Editor</strong>
+                    </div>
+                    <div class="contributor-item">
+                        <p>Bhavya Mittal</p>
+                        <strong>✓ Content Contributor</strong>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 My Webpage. All rights reserved.</p>
+            <p>Built with ❤️ by our collaborative team</p>
+        </footer>
+    </div>
 </body>
 </html>
